@@ -1,0 +1,797 @@
+/* Setup */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* General Body Styles */
+
+ /* Base font size 20px */
+html {
+	font-size: 125%;
+}
+
+/* Utility styles */
+
+/* Skip link code & Visibility Hidden snippet from HackerYou */
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background:#fff;
+    color: #000;
+}
+
+.skipLink:focus {
+    left: 10px;
+}
+
+.visibilityHidden:not(:focus):not(:active) {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+ }
+
+/*STYLING TO REMOVE DEFAULT PADDING AND MARGIN*/
+h1, 
+h2, 
+p, 
+ul, 
+figure, 
+form,
+input, 
+button {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+	display: block;
+}
+
+.mobileImg {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+	text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+/* General font styles */
+h1,
+h2,
+.logo,
+.overlay,
+.readMoreButton,
+a p,
+button {
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.navFont {
+    font-family: "Catamaran", Arial, sans-serif;
+}
+
+p,
+.contactDetails {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 300;
+    color: #1f2022;
+}
+
+/* Header styles start */
+
+.hamburger {
+    display: none;
+}
+
+.hamburger button {
+    background: none;
+    border: none;
+}
+
+.hamburger .fas {
+    font-size: 1.6rem;
+}
+
+header {
+    background: url(../images/headerBackground.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.headerTopBar {
+    padding-top: 20px;
+}
+
+.logo,
+header nav li {
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+.logo {
+    color: #fff;
+    font-size: 3.05rem;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul a {
+    text-transform: uppercase;
+    color: #fff;    
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 5px 0;
+    border: none;
+    line-height: 1.61;
+    transition: all .5s ease-in-out;
+}
+
+header nav ul li a:hover {
+    border-bottom: .3px solid #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 20vh;
+    line-height: .7;
+    padding-bottom: 30px;
+
+}
+
+.oneLogo {
+    font-size: 11.35rem;
+    font-style: italic;
+    font-weight: 600;
+    display: block;
+}
+
+.magazineLogo {
+    font-size: 7.5rem;
+    font-weight: 500;
+}
+
+.socialMediaLinks {
+    text-align: right;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+.socialMediaLinks li a {
+    text-align: center;
+}
+.fab {
+    color: #fff;
+    width: 24px;
+    padding: 15px 0;
+    transition: all .5s ease-in-out;
+}
+
+.fab:hover {
+    color: #183399;
+}
+/* Header styles end */
+
+/* MAIN: Styles start */
+
+.mainHeading {
+    text-align: center;
+    font-size: 2.45rem;
+    text-transform: uppercase;
+    padding: 70px 0;
+}
+
+/*  Section: Article Gallery Stlyes */
+.articleGallery {
+    padding-bottom: 70px;
+}
+
+.articleGallery a {
+    display: block;
+}
+
+.articleGallery li {
+    float: left;
+    width: calc((100% - 80px) / 3);
+    margin: 0 20px;
+    position: relative;
+}
+
+
+.articleGallery li:first-child {
+    margin-left: 0;
+}
+
+.articleGallery li:last-child {
+    margin-right: 0;
+}
+
+.articleGallery li .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:rgba(24, 51, 153, 0.78);
+  color: #fff;
+  padding: 40% 0;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  display: none;
+}
+
+.overlay p {
+    color: #fff;
+    padding: 2px;
+}
+
+.articleGallery li:hover .overlay {
+    display: block;
+}
+
+/* Section: Week Higlights Stlyes*/
+
+.highlights {
+    padding-bottom: 70px;
+}
+
+.highlightsImg {
+    width: calc(30% - 40px);
+    margin-right: 40px;
+    padding: 10px 0;
+    float: left;    
+}
+
+.highlightsCopy {
+    width: 70%;
+    float: left;
+}
+
+.highlightsCopy h2 {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.highlightsCopy p {
+    line-height: 1.45;
+    font-weight: 300;
+    padding-bottom: 25px;
+}
+
+.readMoreButton  {
+    font-size: 0.9rem;
+    line-height: 1.61;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(24, 51, 153, 0.78);
+    padding: 10px 25px;
+    box-shadow: none;
+    transition: all .5s ease-in-out;
+}
+
+.readMoreButton:hover {
+    box-shadow: 0 0 15px rgba(24, 51, 153, 0.78);
+}
+
+/* Section: New Trends Styles & Fashion Week*/
+
+.newTrends,
+.fashionWeek {
+    height: auto;
+}
+
+.newTrendsCopy,
+.fashionWeekCopy {
+    width: 50%;
+}
+
+.newTrendsCopy {
+    padding: 5% 5% 5% 8%;
+}
+
+.fashionWeekCopy {
+    padding: 5%;
+}
+
+.newTrendsImg,
+.fashionWeekImg  {
+   width: 50%;
+}
+.newTrendsImg a ,
+.fashionWeekImg a {
+    display: block;
+}
+.newTrendsCopy,
+.newTrendsImg {
+    float: right;
+}
+.fashionWeekImg,
+.fashionWeekCopy {
+    float: left;
+}
+
+.newTrendsCopy h2,
+.fashionWeekCopy h2 {
+    font-size: 1.75rem;
+    color: #010101;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.newTrendsCopy h2 {
+    width: 60%;
+}
+
+.newTrendsCopy p,
+.fashionWeekCopy p {
+    padding-bottom: 25px;
+    line-height: 1.45;
+}
+/* Section: Fashion Week */
+/* Main styles end */
+
+/* Aside styles start */
+.asideBackground {
+    background-image: url(../images/extraServices.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    background-position: center;
+}
+
+aside ul li {
+    text-align: center;
+    float: left;
+    width: calc(33.3% - 40px);
+    margin: 20px;
+}
+
+aside a p {
+    font-size: 1.55rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: .5px solid transparent;
+}
+
+.fas {
+    color: #fff;
+    font-size: 3rem;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+}
+
+aside a p:hover {
+    box-shadow: 0px 0px 10px #183399;
+}
+
+/* Aside styles end */
+/* Footer styles start */
+.footerMain {
+    background: #e3e3e3;
+    padding: 80px 0; 
+}
+
+.footerBottom {
+    background: #acacac;
+    text-align: center;
+    padding: 10px 0;
+    line-break: 1.61;
+}
+
+.stayUpdated,
+.footerContact,
+.footerNav {
+    float: left;
+}
+
+footer h2 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stayUpdated {
+    width: 55%;
+}
+
+.stayUpdated h2 {
+    padding-bottom: 15px;
+}
+
+.stayUpdated p {
+    padding-bottom: 20px;
+}
+
+.stayUpdated input,
+.stayUpdated button {
+    float: left;
+    padding: 5px 10px;
+    line-height: 1.61;
+    border: none;
+}
+
+.stayUpdated input {
+    width: 65%;
+}
+
+.stayUpdated input:focus,
+.stayUpdated button:focus {
+    border: 1px solid #183399;
+    box-shadow: 0 0 10px #183399;
+}
+
+.stayUpdated input:active,
+.stayUpdated button:active {
+    border: 1px solid #183399;
+}
+
+.stayUpdated button {
+    background: #000;
+    color: #fff;
+    width: 25%;
+    text-transform: uppercase;
+    border: .5px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.stayUpdated button:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+.footerContact {
+    width: 35%;
+}
+
+.footerContact h2 {
+    padding-bottom: 20px;
+}
+
+.contactDetails {
+    width: 75%;
+}
+
+.contactDetails a {
+    text-transform: none;
+    text-decoration: none;
+    color: #1f2022;
+    line-height: 1.45;
+    border: .5px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.footerNav {
+    width: 10%;
+}
+
+.footerNav li a {
+    color: #1f2022;
+    border: .5px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.contactDetails a:hover,
+.footerNav a:hover {
+    border-bottom: .5px solid #1f2022;
+}
+
+.navFont {
+    text-align: right;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    main {
+        background: green;
+    }
+
+    .mainHeading {
+        padding: 60px 0;
+    }
+
+    .highlightsCopy h2 {
+        padding-bottom: 5px;
+    }
+
+    .newTrendsImg {
+        padding-top: 26px 0;
+    }
+
+    .highlightsCopy h2,
+    .newTrendsCopy h2,
+    .fashionWeekCopy h2 {
+        font-size: 1.55rem;
+    }
+    .newTrendsCopy,
+    .fashionWeekCopy  {
+        padding: 2% 5%;
+    }
+
+}
+@media(max-width: 1000px) {
+    main {
+        background: pink;
+    }   
+
+    .readMoreButton {
+        padding: 9px 25px;
+    }
+
+    h1 {
+        padding-bottom: 120px;
+        line-height: .8;
+    }
+    .oneLogo {
+        font-size: 9.35rem;
+    }
+
+    .magazineLogo {
+        font-size: 6.5rem;
+    }
+
+    .highlightsImg {
+        padding: 70px 0;
+        float: left;
+    }
+
+    .newTrendsCopy h2 {
+        width: 99%;
+    }
+
+    .fashionWeekCopy {
+        padding: 2% 2% 5% 5%;
+    }
+
+    aside a p {
+        font-size: 1.35rem;
+    }
+
+    .stayUpdated {
+        width: calc(45% - 50px);
+        margin-right: 50px;
+    }
+
+    .stayUpdated input,
+    .stayUpdated button {
+        float: none;
+        width: 100%;
+    }
+
+    .footerContact {
+        width: calc(40% - 20px);
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    main {
+        background: blue;
+    }
+
+    .logo {
+        font-size: 2.7rem;
+    }
+
+    .oneLogo {
+        font-size: 7.35rem;
+    }
+
+    .magazineLogo {
+        font-size: 4.5rem;
+    }
+
+    .highlightsImg {
+         width: calc(45% - 40px);
+         margin-right: 40px;
+         padding: 55px 0;
+    }
+
+    .highlightsCopy {
+        width: 55%;
+    }
+
+    .newTrendsCopy {
+        padding: 2% 5% 5% 5%;
+    }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* styles */
+}
+
+@media (max-width: 700px) {
+    main {
+        background: red;
+    }
+
+    header nav .web {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mainHeading {
+        padding: 30px 0;
+    }
+
+    .articleGallery {
+        padding-bottom: 50px;
+    }
+    .articleGallery li {
+        width: calc((100% - 40px) / 3);
+        margin: 0 10px;
+    }
+    .readMoreButton {
+        text-align: center;
+    }
+
+
+    .highlightsImg,
+    .highlightsCopy,
+    .newTrendsCopy,
+    .newTrendsImg,
+    .fashionWeekCopy,
+    .fashionWeekImg {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .highlightsImg,
+    .highlightsCopy {
+        /* width: 85%; */
+        padding: 0;
+    }
+
+    .highlightsCopy,
+    .highlightsCopy h2,
+    .newTrendsCopy,
+    .fashionWeekCopy {
+        text-align: center;
+    }
+
+    .highlightsCopy h2 {
+        padding: 25px 0 10px 0;
+    }
+
+    .newTrendsImg,
+    .fashionWeekImg {
+        width: 100%;
+
+    }
+    .newTrendsCopy, 
+    .fashionWeekCopy {
+        width: 85%;
+    }
+
+    .newTrendsCopy h2,
+    .fashionWeekCopy h2 {
+        padding-top: 50px;
+        margin: 0 auto;
+    }
+
+    .newTrendsCopy p,
+    .fashionWeekCopy p {
+        margin: 0 auto;
+    }
+
+    .newTrendsCopy a,
+    .fashionWeekCopy a {
+        margin-bottom: 50px;
+    }
+
+    .footerMain {
+        padding: 40px 0;
+    }
+
+    .stayUpdated {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .stayUpdated input {
+        margin-bottom: 10px;
+    }
+
+    .footerContact,
+    .footerNav {
+        width: 50%;
+        margin: 0;
+    }
+
+    .contactDetails {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) { 
+
+    .logo {
+        display: none;
+    }
+
+    main {
+        background: plum;
+    }
+
+    .oneLogo {
+        font-size: 6.35rem;
+    }
+
+    .oneMagazine {
+        font-size: 4.5rem;
+    }
+    
+    .mainHeading {
+        font-size: 2rem;
+    }
+    .socialMediaLinks {
+        display: none;
+    }
+
+    .asideBackground {
+        background-position: 57% 10%;
+    }
+    
+    aside ul li {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .newTrendsImg,
+    .fashionWeekImg {
+        height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .headerBackground {
+        background: url(../mobileImages/headerBackground-mobile.jpg);
+    }
+
+}
