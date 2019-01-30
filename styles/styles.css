@@ -56,14 +56,7 @@ button {
 
 img {
     width: 100%;
-    height: auto;
 	display: block;
-}
-
-.mobileImg {
-    display: none;
-    width: 100%;
-    height: auto;
 }
 
 .wrapper {
@@ -108,6 +101,7 @@ p,
 
 .hamburger {
     display: none;
+    float: right;
 }
 
 .hamburger button {
@@ -120,7 +114,7 @@ p,
 }
 
 header {
-    background: url(../images/headerBackground.jpg) no-repeat;
+    background: url(../assets/headerBackground.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -157,7 +151,7 @@ header nav ul a {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 5px 0;
-    border: none;
+    border-bottom: .3 solid transparent;
     line-height: 1.61;
     transition: all .5s ease-in-out;
 }
@@ -172,8 +166,7 @@ h1 {
     text-transform: uppercase;
     margin-top: 20vh;
     line-height: .7;
-    padding-bottom: 30px;
-
+    padding-bottom: 5%;
 }
 
 .oneLogo {
@@ -190,22 +183,25 @@ h1 {
 
 .socialMediaLinks {
     text-align: right;
-    padding-right: 40px;
-    padding-bottom: 20px;
+    padding-right: 5%;
+    padding-bottom: 2%;
 }
+
 .socialMediaLinks li a {
     text-align: center;
 }
+
 .fab {
     color: #fff;
     width: 24px;
-    padding: 15px 0;
+    padding: 7px 0;
     transition: all .5s ease-in-out;
 }
 
 .fab:hover {
     color: #183399;
 }
+
 /* Header styles end */
 
 /* MAIN: Styles start */
@@ -222,6 +218,7 @@ h1 {
     padding-bottom: 70px;
 }
 
+/* A tag styled as block element because its child is an image */
 .articleGallery a {
     display: block;
 }
@@ -232,7 +229,6 @@ h1 {
     margin: 0 20px;
     position: relative;
 }
-
 
 .articleGallery li:first-child {
     margin-left: 0;
@@ -314,16 +310,12 @@ h1 {
 
 /* Section: New Trends Styles & Fashion Week*/
 
-.newTrends,
-.fashionWeek {
-    height: auto;
-}
-
 .newTrendsCopy,
 .fashionWeekCopy {
     width: 50%;
 }
 
+/* Padding to align new trends copy to wrapper content*/
 .newTrendsCopy {
     padding: 5% 5% 5% 8%;
 }
@@ -336,14 +328,17 @@ h1 {
 .fashionWeekImg  {
    width: 50%;
 }
+
 .newTrendsImg a ,
 .fashionWeekImg a {
     display: block;
 }
+
 .newTrendsCopy,
 .newTrendsImg {
     float: right;
 }
+
 .fashionWeekImg,
 .fashionWeekCopy {
     float: left;
@@ -367,12 +362,12 @@ h1 {
     padding-bottom: 25px;
     line-height: 1.45;
 }
-/* Section: Fashion Week */
+
 /* Main styles end */
 
 /* Aside styles start */
 .asideBackground {
-    background-image: url(../images/extraServices.jpg);
+    background-image: url(../assets/asideBackground.jpg);
     background-size: cover;
     padding: 60px 0;
     background-position: center;
@@ -380,7 +375,7 @@ h1 {
 
 aside ul li {
     text-align: center;
-    float: left;
+    float: right;
     width: calc(33.3% - 40px);
     margin: 20px;
 }
@@ -394,6 +389,8 @@ aside a p {
 }
 
 .fas {
+    width: 100px;
+    height: 100px;
     color: #fff;
     font-size: 3rem;
     padding: 10px;
@@ -405,6 +402,7 @@ aside a p:hover {
 }
 
 /* Aside styles end */
+
 /* Footer styles start */
 .footerMain {
     background: #e3e3e3;
@@ -487,12 +485,11 @@ footer h2 {
 }
 
 .contactDetails {
-    width: 75%;
+    width: 80%;
 }
 
 .contactDetails a {
     text-transform: none;
-    text-decoration: none;
     color: #1f2022;
     line-height: 1.45;
     border: .5px solid transparent;
@@ -520,9 +517,6 @@ footer h2 {
 
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
-    main {
-        background: green;
-    }
 
     .mainHeading {
         padding: 60px 0;
@@ -541,25 +535,24 @@ footer h2 {
     .fashionWeekCopy h2 {
         font-size: 1.55rem;
     }
+
     .newTrendsCopy,
     .fashionWeekCopy  {
         padding: 2% 5%;
     }
 
 }
+
 @media(max-width: 1000px) {
-    main {
-        background: pink;
-    }   
 
     .readMoreButton {
         padding: 9px 25px;
     }
 
     h1 {
-        padding-bottom: 120px;
-        line-height: .8;
+        padding-bottom: 70px;
     }
+
     .oneLogo {
         font-size: 9.35rem;
     }
@@ -604,53 +597,16 @@ footer h2 {
 }
 
 @media (max-width: 900px) {
-    main {
-        background: blue;
-    }
 
-    .logo {
-        font-size: 2.7rem;
-    }
-
-    .oneLogo {
-        font-size: 7.35rem;
-    }
-
-    .magazineLogo {
-        font-size: 4.5rem;
-    }
-
-    .highlightsImg {
-         width: calc(45% - 40px);
-         margin-right: 40px;
-         padding: 55px 0;
-    }
-
-    .highlightsCopy {
-        width: 55%;
-    }
-
-    .newTrendsCopy {
-        padding: 2% 5% 5% 5%;
-    }
-}
-
-@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* styles */
-}
-
-@media (max-width: 700px) {
-    main {
-        background: red;
-    }
-
-    header nav .web {
+    header nav,
+    .logo,
+    .socialMediaLinks {
         display: none;
     }
 
     .hamburger {
         display: block;
-    }
+    }    
 
     .mainHeading {
         padding: 30px 0;
@@ -659,14 +615,11 @@ footer h2 {
     .articleGallery {
         padding-bottom: 50px;
     }
+
     .articleGallery li {
         width: calc((100% - 40px) / 3);
         margin: 0 10px;
     }
-    .readMoreButton {
-        text-align: center;
-    }
-
 
     .highlightsImg,
     .highlightsCopy,
@@ -680,8 +633,15 @@ footer h2 {
 
     .highlightsImg,
     .highlightsCopy {
-        /* width: 85%; */
         padding: 0;
+    }
+
+    .highlightsImg {
+        width: 75%;
+    }
+
+    .highlightsCopy {
+        width: 100%;
     }
 
     .highlightsCopy,
@@ -695,6 +655,9 @@ footer h2 {
         padding: 25px 0 10px 0;
     }
 
+    .highlightsCopy p {
+        text-align: left;
+    }
     .newTrendsImg,
     .fashionWeekImg {
         width: 100%;
@@ -703,6 +666,7 @@ footer h2 {
     .newTrendsCopy, 
     .fashionWeekCopy {
         width: 85%;
+        padding: 0%;
     }
 
     .newTrendsCopy h2,
@@ -721,6 +685,17 @@ footer h2 {
         margin-bottom: 50px;
     }
 
+     aside ul li {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .asideBackground {
+        background-position: 57% 10%;
+    }
+
     .footerMain {
         padding: 40px 0;
     }
@@ -734,64 +709,195 @@ footer h2 {
 
     .stayUpdated input {
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .footerContact,
     .footerNav {
-        width: 50%;
         margin: 0;
+    }
+
+    .footerContact {
+        width: 60%;
+    }
+
+    .footerNav {
+        width: 40%;
     }
 
     .contactDetails {
         width: 100%;
     }
+
+    .contactDetails a:hover,
+    .footerNav a:hover {
+        border: .5px solid transparent;
+        color: #183399;
+    }
+
+    .footerContact h2 {
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .magazineLogo {
+        font-size: 5.5rem;
+    }
 }
 
 @media (max-width: 600px) { 
 
-    .logo {
-        display: none;
-    }
-
-    main {
-        background: plum;
+    h1 {
+        margin-top: 25vh;
     }
 
     .oneLogo {
         font-size: 6.35rem;
     }
 
-    .oneMagazine {
+    .magazineLogo {
         font-size: 4.5rem;
     }
     
     .mainHeading {
         font-size: 2rem;
     }
-    .socialMediaLinks {
+
+      .articleGallery ul {
+        margin: 0;
+    }
+
+    .articleGallery ul li:last-child {
         display: none;
+        margin: 0;
     }
 
-    .asideBackground {
-        background-position: 57% 10%;
-    }
-    
-    aside ul li {
-        float: none;
-        margin: 0 auto;
-        width: 100%;
-        padding: 10px;
+    .articleGallery ul li {
+        width: calc((100% / 2) - 10px);
+        margin: 5px;
     }
 
-    .newTrendsImg,
-    .fashionWeekImg {
-        height: 250px;
+    .articleGallery ul li:first-child {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .oneLogo {
+        font-size: 6rem;
+    }
+
+    .magazineLogo {
+        font-size: 3.7rem;
+    }
+
+    .footerContact h2 {
+        padding-bottom: 30px;
+    }
+
+    .contactDetails {
+        font-size: .8rem;
     }
 }
 
 @media (max-width: 400px) {
+
     .headerBackground {
-        background: url(../mobileImages/headerBackground-mobile.jpg);
+        background: url(../assets/headerBackground-mobile.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
     }
 
+    h1 {
+        margin-top: 30vh;
+    }
+
+    .magazineLogo {
+        font-size: 3.2rem;
+    }
+
+    .mainHeading {
+        font-size: 1.8rem;
+    }
+
+    .highlightsCopy h2 {
+        font-size: 1.6rem;
+    }
+
+    .highlightsCopy .readMoreButton {
+        padding: 15px 30px;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+    .highlights {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .highlightsCopy,
+    .newTrendsCopy,
+    .fashionWeekCopy,
+    .highlightsImg {
+        width: 100%;
+    }
+
+    .newTrends h2,
+    .fashionWeek h2 {
+        font-size: 1.1rem;
+    }
+
+    .newTrends .readMoreButton,
+    .fashionWeek .readMoreButton {
+        padding: 10px 20px;
+    }
+
+    .asideBackground {
+        background: url(../assets/asideBackground-mobile.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contactDetails,
+    .footerBottom {
+        font-size: 0.7rem;
+        line-height: 1.57;
+    }
+
+    .contactDetails {
+        width: 83%;
+    }
+
+    .stayUpdated p {
+        font-size: 0.8rem;
+    }
+
+    .footerContact {
+        width: 75%
+    }
+
+    .footerNav {
+        width: 25%;
+    }
+    
+}
+
+@media (max-width: 335px) {
+
+    .magazineLogo {
+        font-size: 2.7rem;
+    }
+
+    .footerContact h2 {
+        padding-bottom: 15px;
+    }
 }
